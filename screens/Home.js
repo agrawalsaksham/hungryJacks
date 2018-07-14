@@ -12,6 +12,8 @@ export class Home extends Component {
 	
 	render() {
 
+		const { navigate } = this.props.navigation;
+
 		return (
 
 			<ImageBackground 
@@ -19,7 +21,7 @@ export class Home extends Component {
 				style = {styles.backgroundContainer}>
 				<View style = {styles.buttonContainer}>
 					<TouchableOpacity
-						onPress={this.onTapHere}
+						onPress={() => navigate('MenuScreen')}
 					>
 					<Image
 						source = {require('./img/taphere.jpeg')}
@@ -30,10 +32,6 @@ export class Home extends Component {
 
 			</ImageBackground>
 		);
-	}
-
-	onTapHere() {
-		console.log("good work");
 	}
 
 }
