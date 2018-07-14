@@ -4,11 +4,13 @@ import React, {Component} from 'react';
 import {
   Platform, 
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import Home from './screens/Home';
+import Menu from './screens/Menu';
 
-const AppNavigator = StackNavigator({
-  HomeScreen: { screen: Home}
+const AppNavigator = createStackNavigator({
+  HomeScreen: { screen: Home},
+  MenuScreen: { screen: Menu}
 }); 
 
 export default class App extends Component {
